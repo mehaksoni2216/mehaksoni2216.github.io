@@ -1,21 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Mehak Soni's Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f9;
-            padding: 50px;
-        }
-        h1 { color: #333; }
-        p { color: #666; font-size: 18px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navya Disposal | Rahatgarh</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #fffaf2;
+    color: #292929;
+}
+
+header {
+    background: linear-gradient(120deg, #ff512f, #dd2476, #7b2ff7);
+    color: white;
+    padding: 25px 8%;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 38px;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-top: 8px;
+}
+
+nav {
+    background: #292044;
+    padding: 16px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.hero {
+    padding: 65px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ffe259, #ffa751);
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #542000;
+}
+
+.hero p {
+    margin: 15px;
+    font-size: 18px;
+}
+
+.hero a {
+    display: inline-block;
+    background: #e63946;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.section {
+    padding: 50px 7%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 30px;
+    color: #7b2ff7;
+    margin-bottom: 30px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px #00000015;
+    padding-bottom: 20px;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-7px);
+}
+
+.product img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.product h3 {
+    margin: 15px 5px 8px;
+}
+
+.price {
+    color: #e63946;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.product p {
+    color: #666;
+    margin: 8px;
+}
+
+.contact {
+    background: linear-gradient(120deg, #7b2ff7, #f107a3);
+    color: white;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.contact p {
+    margin: 12px;
+    font-size: 17px;
+}
+
+footer {
+    background: #292044;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+@media(max-width:600px) {
+    header h1 {
+        font-size: 29px;
+    }
+
+    nav a {
+        margin: 7px;
+        display: inline-block;
+        font-size: 14px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <h1>Welcome to Pradeep Soni Live Website!</h1>
-    <p>This page is host by pradeep soni shop name navya disposal .</p>
+
+<header>
+    <h1>🌈 NAVYA DISPOSAL</h1>
+    <p>Your One Stop Shop for Disposable Products</p>
+    <p>Quality Products | Best Service | Affordable Prices</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+    <h2>Welcome to Navya Disposal!</h2>
+    <p>Everything You Need for Parties, Functions & Daily Use.</p>
+    <p>Explore our collection of paper plates, cups, bowls and more!</p>
+    <a href="#products">Explore Products</a>
+</section>
+
+<section class="section" id="products">
+    <h2>🛍️ Our Products</h2>
+
+    <div class="products">
+
+        <div class="product">
+            <img src="https://image.made-in-china.com/202f0j00mTwkGFlalAzZ/Biodegradable-Sugarcane-Bagasse-Pulp-Fiber-Round-Disposable-Food-Carry-out-Takeaway-Compostable-Dish-Paper-Tableware-with-Plate-Bowl.webp" alt="Disposable paper plates">
+            <h3>Paper Plates</h3>
+            <p>Disposable paper plates</p>
+            <div class="price">₹15</div>
+        </div>
+
+        <div class="product">
+            <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7rasl-m8yj5gpk31jh15" alt="Colourful paper tea cups">
+            <h3>Paper Tea Cups</h3>
+            <p>Disposable paper cups</p>
+            <div class="price">₹10</div>
+        </div>
+
+        <div class="product">
+            <img src="https://www.ktkspices.ca/cdn/shop/collections/PAPER_AND_PLASTICS.png?v=1758669810&width=460" alt="Paper bowls and containers">
+            <h3>Paper Bowls</h3>
+            <p>Bowls and food containers</p>
+            <div class="price">Ask for Price</div>
+        </div>
+
+        <div class="product">
+            <img src="https://a.allegroimg.com/s512/11f005/1691811a4b52990c26c60c788e2c/ZESTAW-EKO-NACZYN-KRAFT-TALERZE-KUBKI-SZTUCCE-GRILL-PIKNIK" alt="Disposable cups and plates">
+            <h3>Disposable Tableware</h3>
+            <p>Plates, cups and cutlery</p>
+            <div class="price">Ask for Price</div>
+        </div>
+
+        <div class="product">
+            <img src="https://qiniu.mfdemo.cn/ecolifeware/2025/01/07/DoMeGCDiZwTUd.jpg" alt="Disposable eco-friendly tableware">
+            <h3>Eco-Friendly Products</h3>
+            <p>Eco-friendly plates and bowls</p>
+            <div class="price">Ask for Price</div>
+        </div>
+
+        <div class="product">
+            <img src="https://media.licdn.com/dms/image/v2/D4D12AQHOSUE-663a9g/article-cover_image-shrink_720_1280/B4DZsIRI8WLUAI-/0/1765370273467?e=2147483647&t=CnMnXoQts5lVr1QcYIrsb1mwtXbRbIUOR_yxM3RHEBE&v=beta" alt="Paper cups and bowls">
+            <h3>Disposable Cups & Bowls</h3>
+            <p>Different styles and designs</p>
+            <div class="price">Ask for Price</div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="about">
+    <h2>About Navya Disposal</h2>
+    <p>
+        Welcome to Navya Disposal, your local destination for
+        disposable products. We offer paper plates, paper tea cups,
+        bowls and many other disposable items for daily use,
+        parties and special occasions.
+    </p>
+    <p style="margin-top:15px;">
+        Visit our shop for our available products and prices!
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h2>📍 Visit Our Shop</h2>
+    <p><b>Shop Name:</b> Navya Disposal</p>
+    <p><b>Address:</b> Sanjay Market, Ward No. 3, Rahatgarh</p>
+    <p><b>Location:</b> Rahatgarh, Madhya Pradesh</p>
+    <p>We Welcome You to Navya Disposal!</p>
+</section>
+
+<footer>
+    <p>© 2026 Navya Disposal | All Rights Reserved</p>
+    <p>Thank You for Visiting ❤️</p>
+</footer>
+
 </body>
 </html>
