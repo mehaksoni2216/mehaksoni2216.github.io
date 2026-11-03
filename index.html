@@ -3,268 +3,395 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Navya Disposal | Rahatgarh</title>
+<title>Navya Disposal | Premium Wholesale Catering Supplies Rahatgarh</title>
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    background: #fffaf2;
-    color: #292929;
+    background: #fffcf7;
+    color: #2d2d2d;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Sparkle System Canvas */
+#sparkle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
 }
 
 header {
-    background: linear-gradient(120deg, #ff512f, #dd2476, #7b2ff7);
+    background: linear-gradient(135deg, #1b4d3e, #2e7d32);
     color: white;
-    padding: 25px 8%;
+    padding: 40px 5%;
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 header h1 {
-    font-size: 38px;
+    font-size: 42px;
     letter-spacing: 2px;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 header p {
-    margin-top: 8px;
+    margin-top: 10px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.tagline-bar {
+    background: #ffc107;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 14px;
 }
 
 nav {
-    background: #292044;
-    padding: 16px;
+    background: #113327;
+    padding: 18px;
     text-align: center;
     position: sticky;
     top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+    margin: 0 20px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffc107;
 }
 
 .hero {
-    padding: 65px 20px;
+    padding: 80px 20px;
     text-align: center;
-    background: linear-gradient(135deg, #ffe259, #ffa751);
+    background: linear-gradient(135deg, #f4e8c1, #f1e0b0);
+    border-bottom: 5px solid #2e7d32;
 }
 
 .hero h2 {
-    font-size: 36px;
-    color: #542000;
+    font-size: 40px;
+    color: #1b4d3e;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    margin: 15px;
-    font-size: 18px;
+    max-width: 700px;
+    margin: 10px auto;
+    font-size: 19px;
+    color: #444;
 }
 
-.hero a {
+.hero .badge-container {
+    margin: 20px 0;
+}
+
+.badge {
+    display: inline-block;
+    background: #2e7d32;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hero a.btn {
     display: inline-block;
     background: #e63946;
     color: white;
-    padding: 13px 25px;
+    padding: 14px 35px;
     border-radius: 30px;
     text-decoration: none;
-    margin-top: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(230,57,70,0.4);
+    transition: 0.3s;
+}
+
+.hero a.btn:hover {
+    transform: translateY(-3px);
+    background: #cc2a36;
 }
 
 .section {
-    padding: 50px 7%;
-    text-align: center;
+    padding: 70px 8%;
 }
 
 .section h2 {
-    font-size: 30px;
-    color: #7b2ff7;
-    margin-bottom: 30px;
+    font-size: 34px;
+    color: #1b4d3e;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ffc107;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
 .product {
     background: white;
-    border-radius: 18px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 5px 18px #00000015;
-    padding-bottom: 20px;
-    transition: 0.3s;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    padding-bottom: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+    text-align: center;
 }
 
 .product:hover {
-    transform: translateY(-7px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
 .product img {
     width: 100%;
-    height: 190px;
+    height: 220px;
     object-fit: cover;
+    background-color: #f7f7f7;
 }
 
 .product h3 {
-    margin: 15px 5px 8px;
-}
-
-.price {
-    color: #e63946;
-    font-size: 23px;
-    font-weight: bold;
+    margin: 18px 10px 8px;
+    font-size: 22px;
+    color: #113327;
 }
 
 .product p {
     color: #666;
-    margin: 8px;
+    margin: 0 15px 12px;
+    font-size: 14px;
+}
+
+.price-box {
+    background: #f1f8e9;
+    padding: 8px;
+    margin: 10px 40px;
+    border-radius: 8px;
+    border: 1px dashed #81c784;
+}
+
+.price {
+    color: #d32f2f;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.about-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    border-left: 6px solid #2e7d32;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-box p {
+    font-size: 17px;
+    color: #444;
+    margin-bottom: 15px;
 }
 
 .contact {
-    background: linear-gradient(120deg, #7b2ff7, #f107a3);
+    background: linear-gradient(135deg, #113327, #1b4d3e);
     color: white;
-    padding: 45px 20px;
+    padding: 60px 20px;
     text-align: center;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.1);
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
 .contact h2 {
-    font-size: 30px;
-    margin-bottom: 18px;
+    font-size: 34px;
+    margin-bottom: 10px;
 }
 
 .contact p {
-    margin: 12px;
-    font-size: 17px;
+    margin: 15px;
+    font-size: 18px;
+}
+
+.phone-btn {
+    display: inline-block;
+    background: #ffc107;
+    color: #113327;
+    padding: 12px 30px;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.phone-btn:hover {
+    background: #ffe082;
+    transform: scale(1.03);
 }
 
 footer {
-    background: #292044;
-    color: white;
+    background: #091c15;
+    color: #a0b0a8;
     text-align: center;
-    padding: 18px;
+    padding: 25px;
+    font-size: 14px;
 }
 
 @media(max-width:600px) {
-    header h1 {
-        font-size: 29px;
-    }
-
-    nav a {
-        margin: 7px;
-        display: inline-block;
-        font-size: 14px;
-    }
-
-    .hero h2 {
-        font-size: 27px;
-    }
+    header h1 { font-size: 32px; }
+    nav a { margin: 5px 10px; display: inline-block; font-size: 15px; }
+    .hero h2 { font-size: 28px; }
+    .section { padding: 50px 5%; }
 }
 </style>
 </head>
 
 <body>
 
+<!-- Sparkle Overlay Component -->
+<canvas id="sparkle-canvas"></canvas>
+
 <header>
     <h1>🌈 NAVYA DISPOSAL</h1>
-    <p>Your One Stop Shop for Disposable Products</p>
-    <p>Quality Products | Best Service | Affordable Prices</p>
+    <p>Complete Wholesale & Retail Hub for Eco-Friendly Event Supplies</p>
 </header>
+
+<div class="tagline-bar">
+    ⚡ Premium Quality Products | Trusted Since 2016 | Best Competitive Pricing in Rahatgarh
+</div>
 
 <nav>
     <a href="#home">Home</a>
-    <a href="#products">Products</a>
-    <a href="#about">About Us</a>
-    <a href="#contact">Contact</a>
+    <a href="#products">Our Catalog</a>
+    <a href="#about">Our Legacy</a>
+    <a href="#contact">Order Booking</a>
 </nav>
 
 <section class="hero" id="home">
-    <h2>Welcome to Navya Disposal!</h2>
-    <p>Everything You Need for Parties, Functions & Daily Use.</p>
-    <p>Explore our collection of paper plates, cups, bowls and more!</p>
-    <a href="#products">Explore Products</a>
+    <h2>Make Your Events Extra Special!</h2>
+    <p>We provide comprehensive catering and decorative disposal inventory setups for institutional gatherings, functions, and everyday commercial demands.</p>
+    
+    <div class="badge-container">
+        <span class="badge">🎉 Shaadi (Marriages)</span>
+        <span class="badge">🎂 Birthday Parties</span>
+        <span class="badge"> Gatherings</span>
+        <span class="badge"> Wholesale Rates</span>
+    </div>
+    
+    <a href="#products" class="btn">View Catalog & Prices</a>
 </section>
 
 <section class="section" id="products">
-    <h2>🛍️ Our Products</h2>
+    <h2>🛍️ Our Product Range</h2>
 
     <div class="products">
 
         <div class="product">
-            <img src="https://image.made-in-china.com/202f0j00mTwkGFlalAzZ/Biodegradable-Sugarcane-Bagasse-Pulp-Fiber-Round-Disposable-Food-Carry-out-Takeaway-Compostable-Dish-Paper-Tableware-with-Plate-Bowl.webp" alt="Disposable paper plates">
-            <h3>Paper Plates</h3>
-            <p>Disposable paper plates</p>
-            <div class="price">₹15</div>
+            <img src="https://made-in-china.com" alt="Disposable paper plates">
+            <h3>Premium Paper Plates</h3>
+            <p>Sturdy, heavy-duty sugarcane pulp and paper design ideal for grand feast buffets.</p>
+            <div class="price-box">
+                <div class="price">₹120 <span style="font-size:14px; color:#555;">/ Pack of 50</span></div>
+            </div>
         </div>
 
         <div class="product">
-            <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7rasl-m8yj5gpk31jh15" alt="Colourful paper tea cups">
-            <h3>Paper Tea Cups</h3>
-            <p>Disposable paper cups</p>
-            <div class="price">₹10</div>
+            <img src="https://susercontent.com" alt="Colourful paper cups">
+            <h3>Designer Paper Tea Cups</h3>
+            <p>Heat-insulated safe paper cups suitable for serving piping hot tea, coffee, and beverages.</p>
+            <div class="price-box">
+                <div class="price">₹45 <span style="font-size:14px; color:#555;">/ Pack of 100</span></div>
+            </div>
         </div>
 
         <div class="product">
-            <img src="https://www.ktkspices.ca/cdn/shop/collections/PAPER_AND_PLASTICS.png?v=1758669810&width=460" alt="Paper bowls and containers">
-            <h3>Paper Bowls</h3>
-            <p>Bowls and food containers</p>
-            <div class="price">Ask for Price</div>
+            <img src="https://ktkspices.ca" alt="Disposable bowls">
+            <h3>Deep Catering Bowls</h3>
+            <p>Leak-proof disposable deep bowls engineered securely for handling dal, soups, and sweets.</p>
+            <div class="price-box">
+                <div class="price">₹75 <span style="font-size:14px; color:#555;">/ Pack of 50</span></div>
+            </div>
         </div>
 
         <div class="product">
-            <img src="https://a.allegroimg.com/s512/11f005/1691811a4b52990c26c60c788e2c/ZESTAW-EKO-NACZYN-KRAFT-TALERZE-KUBKI-SZTUCCE-GRILL-PIKNIK" alt="Disposable cups and plates">
-            <h3>Disposable Tableware</h3>
-            <p>Plates, cups and cutlery</p>
-            <div class="price">Ask for Price</div>
+            <img src="https://allegroimg.com" alt="Eco kraft tableware set">
+            <h3>Complete Tableware Combo</h3>
+            <p>All-in-one party solution featuring standard plates, drinkware, and premium wooden cutlery.</p>
+            <div class="price-box">
+                <div class="price">₹250 <span style="font-size:14px; color:#555;">/ Full Set (50 Pax)</span></div>
+            </div>
         </div>
 
         <div class="product">
-            <img src="https://qiniu.mfdemo.cn/ecolifeware/2025/01/07/DoMeGCDiZwTUd.jpg" alt="Disposable eco-friendly tableware">
-            <h3>Eco-Friendly Products</h3>
-            <p>Eco-friendly plates and bowls</p>
-            <div class="price">Ask for Price</div>
+            <img src="https://mfdemo.cn" alt="Biodegradable eco plates">
+            <h3>Eco-Friendly Areca Leaf Products</h3>
+            <p>100% natural, biodegradable leaf dinnerware providing an elegant native traditional look.</p>
+            <div class="price-box">
+                <div class="price">₹180 <span style="font-size:14px; color:#555;">/ Pack of 25</span></div>
+            </div>
         </div>
 
         <div class="product">
-            <img src="https://media.licdn.com/dms/image/v2/D4D12AQHOSUE-663a9g/article-cover_image-shrink_720_1280/B4DZsIRI8WLUAI-/0/1765370273467?e=2147483647&t=CnMnXoQts5lVr1QcYIrsb1mwtXbRbIUOR_yxM3RHEBE&v=beta" alt="Paper cups and bowls">
-            <h3>Disposable Cups & Bowls</h3>
-            <p>Different styles and designs</p>
-            <div class="price">Ask for Price</div>
+            <img src="https://licdn.com" alt="Assorted disposal items">
+            <h3>Party Buffet Assortment</h3>
+            <p>Custom customizable bulk boxes carrying tissue papers, spoons, containers, and mats.</p>
+            <div class="price-box">
+                <div class="price">₹350 <span style="font-size:14px; color:#555;">/ Wholesale Pack</span></div>
+            </div>
         </div>
 
     </div>
 </section>
 
-<section class="section" id="about">
-    <h2>About Navya Disposal</h2>
-    <p>
-        Welcome to Navya Disposal, your local destination for
-        disposable products. We offer paper plates, paper tea cups,
-        bowls and many other disposable items for daily use,
-        parties and special occasions.
-    </p>
-    <p style="margin-top:15px;">
-        Visit our shop for our available products and prices!
-    </p>
-</section>
-
-<section class="contact" id="contact">
-    <h2>📍 Visit Our Shop</h2>
-    <p><b>Shop Name:</b> Navya Disposal</p>
-    <p><b>Address:</b> Sanjay Market, Ward No. 3, Rahatgarh</p>
-    <p><b>Location:</b> Rahatgarh, Madhya Pradesh</p>
-    <p>We Welcome You to Navya Disposal!</p>
-</section>
-
-<footer>
-    <p>© 2026 Navya Disposal | All Rights Reserved</p>
-    <p>Thank You for Visiting ❤️</p>
-</footer>
-
-</body>
-</html>
+<section class="section" id="about" style="background:#f4f9f6;">
+    <h2>Our 10-Year Legacy</h2>
+    <div class="about-box">
